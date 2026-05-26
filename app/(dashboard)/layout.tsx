@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import { DashboardHeader } from '@/components/layout/dashboard-header'
 import { Sidebar } from '@/components/layout/sidebar'
 
@@ -6,7 +7,7 @@ import { Sidebar } from '@/components/layout/sidebar'
  * - 데스크톱: 좌측 고정 Sidebar + 우측 메인 콘텐츠
  * - 모바일: Sheet으로 사이드바 표시 (헤더의 햄버거 메뉴)
  */
-export default function DashboardLayout({ children }: { children: React.ReactNode }) {
+export default function DashboardLayout({ children }: { children: ReactNode }) {
   return (
     <div className="flex min-h-screen flex-col">
       {/* 상단 헤더 */}

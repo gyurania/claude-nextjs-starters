@@ -1,9 +1,11 @@
+import type { ReactNode } from 'react'
+
 /**
  * 인증 레이아웃
  * - 화면 중앙에 카드 형태로 콘텐츠 배치
  * - 배경에 미묘한 그라디언트
  */
-export default function AuthLayout({ children }: { children: React.ReactNode }) {
+export default function AuthLayout({ children }: { children: ReactNode }) {
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden">
       {/* 배경 그라디언트 (선택사항) */}

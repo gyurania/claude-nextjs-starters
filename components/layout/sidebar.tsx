@@ -16,6 +16,10 @@ export function Sidebar() {
   const pathname = usePathname()
 
   const isNavItemActive = (href: string) => {
+    // /dashboard 루트는 정확 일치만, 나머지는 prefix 매칭
+    if (href === '/dashboard') {
+      return pathname === href
+    }
     return pathname === href || pathname.startsWith(href + '/')
   }
 
@@ -52,7 +56,7 @@ export function Sidebar() {
             >
               <Icon className="h-5 w-5 shrink-0" />
               <span>{item.title}</span>
-              {isActive && <Badge variant="secondary" className="ml-auto h-5 px-1.5 text-xs">신규</Badge>}
+              {item.badge && <Badge variant="secondary" className="ml-auto h-5 px-1.5 text-xs">{item.badge}</Badge>}
             </Link>
           )
         })}

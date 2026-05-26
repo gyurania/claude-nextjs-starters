@@ -27,6 +27,7 @@ export interface NavItem {
   icon: LucideIcon
   description?: string
   disabled?: boolean
+  badge?: string
 }
 
 export const NAV_ITEMS: NavItem[] = [
