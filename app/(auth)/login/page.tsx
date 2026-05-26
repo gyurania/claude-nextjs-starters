@@ -13,17 +13,19 @@ export default function LoginPage() {
         <CardDescription>계정에 로그인하여 계속 진행하세요</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
-        <div className="space-y-2">
-          <Label htmlFor="email">이메일</Label>
-          <Input id="email" type="email" placeholder="name@example.com" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="password">비밀번호</Label>
-          <Input id="password" type="password" placeholder="••••••••" />
-        </div>
-        <Button type="submit" className="w-full">
-          로그인
-        </Button>
+        <form className="space-y-4">
+          <div className="space-y-2">
+            <Label htmlFor="email">이메일</Label>
+            <Input id="email" name="email" type="email" placeholder="name@example.com" required />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="password">비밀번호</Label>
+            <Input id="password" name="password" type="password" placeholder="••••••••" required />
+          </div>
+          <Button type="submit" className="w-full">
+            로그인
+          </Button>
+        </form>
       </CardContent>
       <Separator />
       <CardFooter className="flex flex-col gap-4">

@@ -15,6 +15,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { ThemeToggle } from './theme-toggle'
 import { Sidebar } from './sidebar'
+import { CURRENT_USER } from '@/lib/constants'
 
 /**
  * 대시보드 헤더
@@ -59,12 +60,12 @@ export function DashboardHeader() {
             {/* 유저 정보 */}
             <div className="flex items-center gap-3 px-2 py-1.5">
               <Avatar className="h-8 w-8">
-                <AvatarImage src="https://github.com/shadcn.png" alt="유저 아바타" />
-                <AvatarFallback>GY</AvatarFallback>
+                <AvatarImage src={CURRENT_USER.avatarUrl} alt="유저 아바타" />
+                <AvatarFallback>{CURRENT_USER.initials}</AvatarFallback>
               </Avatar>
               <div className="flex flex-col space-y-1">
-                <p className="text-sm font-medium leading-none">Gyuran Kim</p>
-                <p className="text-xs leading-none text-muted-foreground">gyuraniakim@gmail.com</p>
+                <p className="text-sm font-medium leading-none">{CURRENT_USER.name}</p>
+                <p className="text-xs leading-none text-muted-foreground">{CURRENT_USER.email}</p>
               </div>
             </div>
             <DropdownMenuSeparator />
@@ -81,7 +82,7 @@ export function DashboardHeader() {
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
-              <Link href="/auth/logout">로그아웃</Link>
+              <Link href="/api/auth/logout">로그아웃</Link>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

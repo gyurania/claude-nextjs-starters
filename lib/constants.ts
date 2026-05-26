@@ -62,11 +62,19 @@ export const NAV_ITEMS: NavItem[] = [
   },
 ]
 
+// 현재 사용자 정보
+export const CURRENT_USER = {
+  name: 'Gyuran Kim',
+  email: 'user@example.com',
+  avatarUrl: '/images/avatar.png',
+  initials: 'GY',
+}
+
 // 사용자 네비게이션 (드롭다운 메뉴)
 export const USER_NAV_ITEMS = [
   { label: '프로필', href: '/dashboard/profile' },
   { label: '설정', href: '/dashboard/settings' },
-  { label: '로그아웃', href: '/auth/logout', isDangerous: true },
+  { label: '로그아웃', href: '/api/auth/logout', isDangerous: true },
 ]
 
 // 랜딩 페이지 Features
