@@ -1,12 +1,11 @@
 {
   "hooks": {
-    "Notification": [
+    "Stop": [
       {
-        "matcher": "",
         "hooks": [
           {
             "type": "command",
-            "command": "powershell -c \"[System.Media.SystemSounds]::Exclamation.Play()\""
+            "command": "powershell -c \"(New-Object Media.SoundPlayer 'C:\\Windows\\Media\\chimes.wav').PlaySync()\""
           }
         ]
       }
