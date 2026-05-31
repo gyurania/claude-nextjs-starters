@@ -9,7 +9,7 @@
           },
           {
             "type": "command",
-            "command": "bash .claude/scripts/slack-notify.sh stop"
+            "command": "bash .claude/hooks/on-task-complete-notification.sh"
           }
         ]
       }
@@ -24,7 +24,7 @@
           },
           {
             "type": "command",
-            "command": "bash .claude/scripts/slack-notify.sh permission"
+            "command": "bash .claude/hooks/on-permission-notification.sh"
           }
         ]
       }
