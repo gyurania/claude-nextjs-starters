@@ -9,7 +9,7 @@
           },
           {
             "type": "command",
-            "command": "bash .claude/hooks/on-task-complete-notification.sh"
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; & '.claude/hooks/on-task-complete-notification.ps1'\""
           }
         ]
       }
@@ -24,7 +24,7 @@
           },
           {
             "type": "command",
-            "command": "bash .claude/hooks/on-permission-notification.sh"
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; & '.claude/hooks/on-permission-notification.ps1'\""
           }
         ]
       }
