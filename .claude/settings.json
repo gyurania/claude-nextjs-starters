@@ -6,16 +6,25 @@
           {
             "type": "command",
             "command": "powershell.exe -c \"(New-Object Media.SoundPlayer 'C:\\Windows\\Media\\Ring02.wav').PlaySync()\""
+          },
+          {
+            "type": "command",
+            "command": "bash .claude/scripts/slack-notify.sh stop"
           }
         ]
       }
     ],
     "Notification": [
       {
+        "matcher": "permission_prompt",
         "hooks": [
           {
             "type": "command",
             "command": "powershell.exe -c \"(New-Object Media.SoundPlayer 'C:\\Windows\\Media\\Ring06.wav').PlaySync()\""
+          },
+          {
+            "type": "command",
+            "command": "bash .claude/scripts/slack-notify.sh permission"
           }
         ]
       }
